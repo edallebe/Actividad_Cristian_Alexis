@@ -1,11 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Favorite Songs</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden; /* Ocultar scroll original */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            align-items: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+        }
+        .container {
+            flex: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            overflow-y: scroll; /* Scroll sólo vertical */
+            position: relative;
+            scrollbar-width: none; /* Ocultar scroll original en Firefox */
+        }
+        .container::-webkit-scrollbar {
+            display: none; /* Ocultar scroll original en Chrome/Safari */
+        }
+        .welcome, .welcome2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .welcome h1, .welcome2 h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .welcome p, .welcome2 p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .columns {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .column {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .column h2 {
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        /* Estilos del botón */
+        .btn {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-decoration: none;
+            display: block; /* Para hacer que el enlace ocupe el espacio del botón */
+            text-align: center; /* Centrar el texto del botón */
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Canciones Favoritas</h1>
+    </header>
+
+    <div class="container">
+        <section class="welcome">
+            <h1>Lista de nuestras canciones favoritas</h1>
+            <p>Canciones favoritas de Alexis</p>
+        </section>
+
+        <div class="columns">
+            <div class="column">
+                <a href="https://www.youtube.com/watch?v=pAgnJDJN4VA" class="btn">Black in Black - AC/DC</a>
+            </div>
+            <div class="column">
+                <a href="https://www.youtube.com/watch?v=ZhIsAZO5gl0" class="btn">I Was Made for Lovin' You - KISS</a>
+            </div>
+        </div>
+
+        <section class="welcome2">
+            <p>Canciones favoritas de Cristian</p>
+        </section>
+
+        <div class="columns">
+            <div class="column">
+                <a href="https://www.youtube.com/watch?v=WLubS6QOMsQ" class="btn">Eyeless - Slipknot</a>
+            </div>
+            <div class="column">
+                <a href="https://www.youtube.com/watch?v=9d4ui9q7eDM" class="btn">Holy Wars - Megadeth</a>
+            </div>
+        </div>
+
+        <!-- Botón que redirige a index2.html -->
+        <a href="index2.html" class="btn">Ir a ver los álbumes donde pertenecen estas canciones</a>
+    </div>
     
+    <footer>
+        <p>&copy; 2024 Mis canciones favoritas. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
